@@ -37,13 +37,7 @@ public class LotkaVolterraObjectiveFunction extends ContinuousObjectiveFunction 
 	 * @param lvt the data to fit
 	 */
 	public LotkaVolterraObjectiveFunction(LotkaVolterraTrace lvt) {
-		// --------------------------------------------------------------
-		// TODO: uncomment and complete the following line 
-		// 		 with the number of variables based on
-		//       the number of parameters in the Lotka-Volterra 
-		//		 model. 
-		// --------------------------------------------------------------
-		//super( ? );
+		super(getNumberOfParameters(lvt));
 		
 		this.lvt = lvt;
 		n = lvt.getNumberOfSpecies();
@@ -53,6 +47,18 @@ public class LotkaVolterraObjectiveFunction extends ContinuousObjectiveFunction 
 		// TODO: define the range of each variable
 		// --------------------------------------------------------------
 		
+	}
+	
+	/**
+	 * Returns the number of parameters of the Lotka-Volterra model
+	 * @param lvt the data to fit
+	 * @return the number of parameters
+	 */
+	public static int getNumberOfParameters(LotkaVolterraTrace lvt) {
+		// --------------------------------------------------------------
+		// TODO: compute and return the number of parameters
+		// --------------------------------------------------------------
+		return 0;
 	}
 
 	@Override
