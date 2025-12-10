@@ -70,8 +70,8 @@ public class RunEA4LV {
 		System.out.println(bestModel);
 		LotkaVolterraTrace bestTrace = bestModel.integrate(lvt.getStateAtTime(0.0), 
 														   lvt.getMaxTime(), 
-														   1);
-		bestTrace.saveToFile(args[0] + "-fit-" + args[1] + ".txt", 0, lvt.getMaxTime(), 1);
+														   0.01);
+		bestTrace.saveToFile(args[0] + "-fit-" + args[1] + ".txt", 0, lvt.getMaxTime(), 0.1);
 		bestModel.saveToFile(args[0] + "-model-" + args[1] + ".txt");
 	}
 	
